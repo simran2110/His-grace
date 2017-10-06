@@ -1,0 +1,480 @@
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/animate.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+/*
+::-webkit-scrollbar {
+  display: none;
+}
+
+body .swanky {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}*/
+
+body {
+ /* height: 100vh;
+  font-weight: 500;*/
+ 
+  /*background: -webkit-linear-gradient(315deg, #8254EA 0%, #E86DEC 100%);
+  background: linear-gradient(135deg, #8254EA 0%, #E86DEC 100%);
+   -webkit-font-smoothing: antialiased;*/
+  font-size: 12px;
+ font-family: "Roboto", sans-serif;
+}
+body .swanky {
+ -webkit-perspective: 600px;
+          perspective: 600px;
+  width: 700px;
+  position: relative;
+  margin: auto;
+  
+  background: #737373;
+width:1400px;
+}
+
+body .swanky_title__social a {
+  position: relative;
+  overflow: hidden;
+  width: 140px;
+  margin-right: 15px;
+  text-decoration: none;
+  padding: 0px 0px 5px 0px;
+  height: 40px;
+  border: 2px solid white;
+  float: left;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+body .swanky_title__social a .slide {
+  height: 45px;
+  width: 100px;
+  float: left;
+  position: absolute;
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
+  left: -120px;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  background: white;
+}
+body .swanky_title__social a .slide .arrow {
+  position: absolute;
+  right: 31px;
+  top: 24px;
+  opacity: 0;
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+}
+body .swanky_title__social a .slide .arrow .stem {
+  width: 10px;
+  height: 2px;
+  background: #858490;
+}
+body .swanky_title__social a .slide .arrow .point {
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #858490;
+  top: -3px;
+  right: 1px;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-top: 2px solid #858490;
+}
+body .swanky_title__social a img {
+  width: 16px;
+  margin-left: 10px;
+  position: relative;
+  margin-right: 8px;
+  -webkit-transition-property: margin-left;
+  transition-property: margin-left;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+  margin-top: 10px;
+  top: 4px;
+}
+body .swanky_title__social a:hover > .slide {
+  left: -70px;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+}
+body .swanky_title__social a:hover > img {
+  margin-left: 40px;
+  -webkit-transition-property: margin-left;
+  transition-property: margin-left;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+}
+body .swanky_title__social a:hover > .slide .arrow {
+  right: 11px;
+  opacity: 1;
+  -webkit-transition-property: right,opacity;
+  transition-property: right,opacity;
+  -webkit-transition-delay: .07s;
+          transition-delay: .07s;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+}
+body .swanky .intro {
+  float: right;
+  color: white;
+  width: 370px;
+  top: 50px;
+  position: relative;
+}
+body .swanky .intro h1 {
+  text-shadow: 0px 2px rgba(0, 0, 0, 0.26);
+}
+body .swanky .intro p {
+  line-height: 20px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.26);
+}
+body .swanky_wrapper {
+    /*if width not* set it will extend in the complete row*/
+  height: auto;
+  overflow: hidden; /*to hide the scrollbar*/
+  border-radius: 4px;
+  background: #2a394f;
+  width:600px;
+}
+body .swanky_wrapper label {
+  padding: 25px;
+  float: left;
+  position: relative;
+  
+  width: 225px;
+  color: #eff4fa;
+  -webkit-transition: text-indent .15s, height .3s;  /*keeping the divs separate"*/
+  transition: text-indent .15s, height .3s;
+  box-sizing: border-box;
+  background: #2a394f;
+
+  }
+body .swanky_wrapper label i {
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+  font-size:8px;
+}
+
+body .swanky_wrapper label span {
+ position: relative;
+  top: -3px;
+ 
+}
+body .swanky_wrapper label:hover {
+  background: #212e41;
+  border-bottom: 2px solid #1a75ff;
+  text-indent: 4px;
+}
+/*body .swanky_wrapper label:hover .bar {
+  width: 100%;
+}
+body .swanky_wrapper label .bar {
+  width: 0px;
+  -webkit-transition: width .15s;
+  transition: width .15s;
+  height: 2px;
+  position: absolute;
+  display: block;
+  background: #355789;
+  bottom: 0;
+  left: 0;
+}*/
+body .swanky_wrapper label .lil_arrow {
+  width: 5px;
+  height: 5px;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  float: right;
+  position: relative;
+  top: 6px;
+  right: 2px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+body .swanky_wrapper__content {
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+}
+body .swanky_wrapper__content li {
+  width: 100%;
+  opacity: 0;
+  left: -100%;
+  background: #15a4fa;
+  padding: 25px 0px;
+  text-indent: 25px;
+  box-shadow: 0px 0px #126CA1  inset;
+  -webkit-transition: box-shadow .3s,text-indent .3s;
+  transition: box-shadow .3s,text-indent .3s;
+  position: relative;
+}
+body .swanky_wrapper__content li:hover {
+  background: #0c93e4;
+  box-shadow: 3px 0px #126CA1  inset;
+  -webkit-transition: box-shadow .3s linear,text-indent .3s linear;
+  transition: box-shadow .3s linear,text-indent .3s linear;
+  text-indent: 31px;
+}
+body .swanky_wrapper__content .clear {
+  clear: both;
+}
+
+div.swanky_wrapper
+{
+    display:inline;
+} 
+input[type='checkbox']:checked + label .swanky_wrapper__content {
+  display: block;
+  top: 68px;
+/*  border-bottom: 1px solid #212e41;*/
+}
+
+input[type='checkbox']:checked + label > .lil_arrow {
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  border-top: 2px solid #057dc7;
+  border-right: 2px solid #057dc7;
+}
+
+#Automated_Search:checked + label {
+  height : 270px;
+  background: #212e41;
+  text-indent: 4px;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .6s;
+          transition-duration: .6s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#Alerts:checked + label {
+  height : 200px;
+  background: #212e41;
+  text-indent: 4px;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .6s;
+          transition-duration: .6s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#XLPAT_learning:checked + label {
+  height : 130px;
+  background: #212e41;
+  text-indent: 4px;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .6s;
+          transition-duration: .6s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+input[type='checkbox']:checked:nth-of-type(1) + label .bar {
+  width: 0;
+}
+
+input[type='checkbox']:checked + label li:nth-of-type(1) {
+
+  -webkit-animation: in 0.15s 0.575s forwards;
+          animation: in 0.15s 0.575s forwards;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-animation: in 0.15s 0.575s forwards;
+  -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+input[type='checkbox']:checked + label li:nth-of-type(2) {
+  -webkit-animation: in 0.15s 0.7s forwards;
+          animation: in 0.15s 0.7s forwards;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-animation: in 0.15s 0.7s forwards;
+  -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+input[type='checkbox']:checked + label li:nth-of-type(3) {
+  -webkit-animation: in 0.15s 0.825s forwards;
+          animation: in 0.15s 0.825s forwards;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-animation: in 0.15s 0.825s forwards;
+  -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+input[type='checkbox']:checked + label li:nth-of-type(4) {
+  -webkit-animation: in 0.15s 0.95s forwards;
+          animation: in 0.15s 0.95s forwards;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-animation: in 0.15s 0.95s forwards;
+  -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@-webkit-keyframes in {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes in {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+nav ul li a:hover
+{
+     color : red;
+}
+</style>
+</head>
+<body>
+<!-- / Begin Body -->
+<nav class="navbar navbar-inverse" style="height:127px; display:fixed">
+ <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand"> 
+	<a href="#">
+          Search 
+        </a>
+      </div>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a class="fadeIn" href="#">Home</a>
+      </li>
+	<li><a href="#">Admin Panel</a>
+      </li>	
+	<li><a href="#">Profile</a>
+      </li>
+	<li><a href="#">My Orders</a>
+      </li>
+	<li><a href="#">Search History</a>
+      </li>
+	<li><a href="#">NPL History</a>
+      </li>
+	<li><a href="#">My Wallet</a>
+      </li>
+	<li><a href="#">Support</a>
+      </li>
+
+      </li>
+       <li><a href="#">About</a>
+      </li>
+     
+    </ul>
+  </div>
+
+<div class='swanky'>
+  <!-- /////////// Begin Dropdown //////////// -->
+  <div class='swanky_wrapper'>
+    <input id='Automated_Search' name='checkbox' type='checkbox'>
+    <label for='Automated_Search'>
+       <i class="fa fa-search" style="font-size:24px"></i>
+      <span>Automated Search</span>
+      <div class='lil_arrow'></div>
+      <div class='bar'></div>
+      <div class='swanky_wrapper__content'>
+        <ul>
+          <li>Invalidation</li>
+          <li>Patentibility</li>
+          <li>Evidence of Use</li>
+        </ul>
+      </div>
+    </label>
+    </div>
+    <div class='swanky_wrapper'>
+    <input id='Alerts' name='checkbox' type='checkbox'>
+    <label for='Alerts'>
+      <i class="fa fa-star" style="font-size:24px"></i>
+      <span>Alerts</span>
+      <div class='lil_arrow'></div>
+      <div class='bar'></div>
+      <div class='swanky_wrapper__content'>
+        <ul>
+          <li>ALerts</li>
+          <li>Pair Track</li>
+        </ul>
+      </div>
+    </label>
+   </div>
+    <div class='swanky_wrapper'>
+    <input id='XLPAT_learning' name='checkbox' type='checkbox'>
+    <label for='XLPAT_learning'>
+      <i class="fa fa-navicon" style="font-size:24px"></i>
+      <span>XLPAT learning</span>
+      <div class='lil_arrow'></div>
+      <div class='bar'></div>
+      <div class='swanky_wrapper__content'>
+        <ul>
+          <li>Taxnomy</li>
+          
+        </ul>
+      </div>
+    </label>
+   </div>
+    <div class='swanky_wrapper'>
+
+    <input id='Buckets' name='checkbox' type='checkbox'>
+    <label for='Buckets/Work-book'>
+      <i class="fa fa-camera" style="font-size:24px"></i>
+      <span>Users</span>
+     
+    </label>
+     </div>
+  <!-- /////////// End Dropdown //////////// -->
+
+</div>
+</div>
+</nav>
+</body>
+</html>
