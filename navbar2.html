@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/animate.css">
+  <script>
+	$(document).ready(function(){
+	    $("a").hover(function(){
+     	    $("a").fadeIn();
+            });
+	});
+  </script>
+  <style>
+  .caret.caret-up {
+    border-top-width: 0;
+    border-bottom: 4px solid #fff;
+  }
+  button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  a:hover
+  {
+    font-size:100px;
+ }
+  </style>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+	<div class="navbar-header">
+      <div class="navbar-brand"> 
+	<a href="#">
+          Search 
+        </a>
+      </div>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a class="fadeIn" href="#">Home</a>
+      </li>
+	<li><a href="#">Admin Panel</a>
+      </li>	
+	<li><a href="#">Profile</a>
+      </li>
+	<li><a href="#">My Orders</a>
+      </li>
+	<li><a href="#">Search History</a>
+      </li>
+	<li><a href="#">NPL History</a>
+      </li>
+	<li><a href="#">My Wallet</a>
+      </li>
+	<li><a href="#">Support</a>
+      </li>
+
+      </li>
+       <li><a href="#">About</a>
+      </li>
+     
+    </ul>
+  </div>
+  <div class="container-fluid">
+      <div class="navbar-header"> 
+	<button type="button" class="btn btn-default">
+          <span class="glyphicon glyphicon-search"></span> Search 
+        </button>
+      </div>
+    <ul class="nav navbar-nav">
+      <li class="dropdown"> <&nbsp>
+		<button class="btn dropdown-toggle" style="background-color: rgb(168,0,0); color: white;" type="button" data-toggle="dropdown">
+		<span class="glyphicon glyphicon-search"></span>Automated Search      
+                <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Invalidator</a></li>
+          <li><a href="#">Patentability</a></li>
+          <li><a href="#">EoU/Infrigement(Beta)</a></li>
+        </ul>
+      </li>
+     
+      <li class="dropdown"><&nbsp>
+	<button class="btn dropdown-toggle" style="background-color:#0066CC; color: white;" type="button" data-toggle="dropdown">
+	   <span class="glyphicon glyphicon-star"></span>Alerts<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Alerts</a></li>
+          <li><a href="#">Pair Track</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><&nbsp>
+	<button class="btn dropdown-toggle" style="background-color:#006633; color: white;" type="button" data-toggle="dropdown"> 
+			XLPAT learning      
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Taxonomy</a></li>
+        </ul>
+      </li>
+      <li><&nbsp>
+	<button  type="button" class="btn" style="background-color:#CCCC33; color: white;">
+			<span class="glyphicon glyphicon-camera"></span>Buckets/Work-Books  	
+        </button>
+      </li>
+    </ul>
+  </div>
+<p> </p>
+</nav>
+
+<a href="#" class="bb">hello</a>
+</body>
+</html>
+
