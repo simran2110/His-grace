@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<style>
+    /* header */
+header
+{
+    overflow: hidden;
+    z-index : 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color : black ;
+    margin:0px;
+    border:1px solid black;
+    color : white;
+    height:50px;
+    padding:15px;
+    font-size:20px;
+    display: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/* body */
+body
+{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #383e4b;
+    text-align: left;
+    background-color: #eeeeee;
+}
+
+/* div container */
+div.container
+{
+    margin : 0px;
+    width:100%;
+
+}
+     /* table */
+tbody 
+{
+    display:block;
+    height:260px;
+    overflow:auto;
+    
+}
+thead, tbody tr 
+{ 
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+thead 
+{
+
+    width: calc( 100% - 1em )
+}
+table 
+{
+    width:300px;
+    text-align:center;
+    border-color: inherit;
+}
+/* input-text-box */
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  color: #555;
+  
+  font-family: 'Arvo';
+  font-size: 18px;
+
+  position: relative;
+  top: 50%;
+  width: 200px;
+}
+.input:focus {
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #AAA;
+}
+
+
+.input:focus + .underline {
+  transform: scale(1);
+}
+/*side navbar or vertical menu*/
+ul 
+{
+  padding: 0;
+  margin: 0;
+}
+
+li 
+{
+  list-style-type: none;
+}
+
+label 
+{
+  cursor: pointer;
+}
+
+
+body .swanky 
+{
+  margin: auto;
+ 
+}
+
+
+body .swanky_wrapper 
+{ 
+  width: 225px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #2a394f;
+}
+body .swanky_wrapper label 
+{
+  padding: 25px;
+  float: left;
+  height: 72px;
+  border-bottom: 1px solid #253041;
+  position: relative;
+  width: 100%;
+  color: #eff4fa;
+  -webkit-transition: text-indent .15s, height .3s;
+  transition: text-indent .15s, height .3s;
+  box-sizing: border-box;
+}
+
+body .swanky_wrapper label span {
+  position: relative;
+  top: -3px;
+}
+body .swanky_wrapper label:hover {
+  background: #212e41;
+  border-bottom: 2px solid #005580;
+  text-indent: 4px;
+}
+body .swanky_wrapper label:hover .bar {
+  width: 100%;
+}
+body .swanky_wrapper label .lil_arrow {
+  width: 5px;
+  height: 5px;
+  -webkit-transition: transform 0.8s;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  float: right;
+  position: relative;
+  top: 6px;
+  right:-12px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+
+/*glyphicon for upload guidelines and sample cv*/
+.glyphicon-red 
+{
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid hsl(0, 60%, 50%);
+  color: white;
+  display: inline-table;
+  text-align: center;
+  background:hsl(0, 60%, 50%);
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.glyphicon-blue 
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #6699ff;
+  color: white;
+  display: inline-table;
+  text-align: center;
+  background:#6699ff;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+
+a
+{
+    text-decoration:none; 
+}
+
+/*columns*/
+.col-md-2
+{
+    z-index:8; 
+    position:fixed;  
+    height : 650px; 
+    margin-top:50px;
+     
+    padding:0;
+    background: #282828;
+}
+.col-md-8
+{
+    margin-top:37px; 
+    margin-left:225px;
+}
+/*modal-box*/
+.modal 
+{
+  
+   top:150px;
+   right: 40px;
+   bottom: 0;
+   left: 0;
+   z-index: 10040;
+   overflow: auto;
+   overflow-y: auto;
+} 
+.modal-header-primary 
+{
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #428bca;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+li.active label
+{
+    background: #282828;
+    border-bottom: 2px solid #005580;
+    
+}
+</style>
+<script>
+
+    $(document).ready(function(){
+	    $(".bluebutton").mouseenter(function(){
+	        $(this).css("background-color", "white");
+	       $(this).css("color", "#428bca");
+	        $(this).css("border-color", "#428bca");
+	         
+	    });
+	    $(".bluebutton").mouseleave(function(){
+	       $(this).css("background-color", "#428bca");
+	       $(this).css("color", "white");
+	        $(this).css("border-color", "white");
+	    });
+	});
+</script>
+<script>
+$(document).ready(function() 
+{
+    var wrapper         = $(".automatch"); //Fields wrapper
+    var add_button      = $("#add_field_button"); //Add button ID
+    var value;
+    var id = 0;
+    $(add_button).click(function(e){ //on add input button click
+            id = id + 1;
+            $('#myModal2').off().on('click', '.btn', function()
+             {
+                value = $('#myPopupInput2').val();
+                $(wrapper).append(`<div class="col-md-5 "> <div id=`+id+` class="form-group"><label for=`+value+`>`+value + `</label> 
+                        <a class="btn edit" onclick="edit(this)" data-toggle="modal"  data-target="#myModal" ><span class="glyphicon glyphicon-pencil"></span></a>
+                        <a class="remove" onclick="remove(this)" style="display:inline;" ><span class="glyphicon glyphicon-remove"></span></a>
+                        <div class="input-group dropdown">
+                            <input type="text" class="form-control docketno dropdown-toggle" >
+                            <ul class="dropdown-menu">
+                            <li><a href="#" >Norway (+47)</a></li>
+                            <li><a href="#" >USA (+1)</a></li>
+                            <li><a href="#" >Japan (+55)</a></li>
+                            </ul>
+                            <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                        </div>
+                        </div>
+                </div>`); 
+                document.getElementById("myPopupInput2").value = "";
+                
+            });
+            
+       
+
+    // });
+});
+});
+
+function remove(param)
+{
+    param.parentNode.parentNode.remove();
+}
+
+function edit(param)
+{
+    var x= param.parentNode;
+    y=$(x).attr("id");
+    z = document.getElementById(y).firstChild;
+    console.log(z);
+      $('#myModal').on('click', '.btn', function()
+    {
+            var value = $('#myPopupInput').val();
+            z.innerHTML  = value;
+             document.getElementById("myPopupInput").value = "";
+             
+    });
+
+} 
+function display_automatchedcolumns()
+{
+    var x = document.getElementById("row2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<body style="overflow-x:none;">
+
+<div class="container" >
+    <header style="position:fixed;" >
+            Xlpat Labs
+    </header>
+    <div class="row" style="display: flex;">
+            
+            <div class="col-md-2">
+                <div class="swanky">
+                    <div class='swanky_wrapper' style="position:fixed;">
+                       <ul>
+
+                            <li class="active" data-toggle="tab" href="#one" style="width:200;">
+                                <label for='Select Bucket'>
+                                <span class="glyphicon glyphicon-camera" style="font-size:10px;color:#F0F0F0;">
+                                </span>
+                                <span> <a type="button" style=" text-decoration:none;  color:#F0F0F0;"> &nbsp Select Bucket </a></span>
+                                <div class='lil_arrow'></div>
+                                <div class='bar'></div>
+                                </label>
+                            </li>
+                            
+                            <li href="#two" data-toggle="tab">
+                                <label for='upload csv'>
+                                <span class="glyphicon glyphicon-file" style="font-size:10px;color:#F0F0F0;">
+                                </span>
+                                <span> <a type="button"  style=" text-decoration:none;  color:#F0F0F0;"> &nbsp Upload CSV </a></span>
+                                <div class='lil_arrow'></div>
+                                <div class='bar'></div>
+                                </label>
+                            </li>  
+                                
+                            <li href="#three"  data-toggle="tab">
+                                <label for='map columns'>
+                                <span class="glyphicon glyphicon-upload" style="font-size:10px;color:#F0F0F0;">
+                                </span>
+                                <span> <a type="button"  style=" text-decoration:none;  color:#F0F0F0;"> &nbspMap Columns</a></span>
+                                <div class='lil_arrow'></div>
+                                <div class='bar'></div>
+                                </label>
+                            </li>
+
+                            <li href="#four" data-toggle="tab">
+                                <label for='verification'>
+                                <span class="glyphicon glyphicon-ok" style="font-size:10px;color:#F0F0F0;">
+                                </span>
+                                <span> <a type="button"  style=" text-decoration:none;  color:#F0F0F0;">&nbsp  Verification</a></span>
+                                <div class='lil_arrow'></div>
+                                <div class='bar'></div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8   tab-content" style="margin-top:37px;">
+                <div id="one" style="width:100%" class="tab-pane fade in active">
+                    <div class="title" style="margin-left:30px;margin-top:30px; margin-bottom:20px; background-color : white; border-radius: 30px; width:100%; ">
+                            <span ><b style="font-size:30px; padding-left:20px;">Select Bucket </b> <span style="font-size:15px; padding-left:10px;"> enables you to select bucket to upload your csv</span></span> 
+                    </div>
+                    <div style="margin-left:40px; margin-top:30px;">
+                        <div class="panel panel-default" >   
+                            <div class="panel-body" style="font-style:italic;"><b>Create Your Own Bucket!</b></div>
+                            <div class="panel-footer"> 
+                                <div style="margin: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-camera"></i></span>
+                                    <input id="newbucket" type="text" class="form-control" name="newbucket" placeholder="new bucket name" value="" >
+                                    <span class="input-group-btn">
+                                        <button class="browse btn btn-primary input-md" type="button" ><i class="glyphicon glyphicon-enter"></i> Go</button>
+                                    </span>                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scrollingTable" style="margin:40px;">    
+                            <span style="font-style:italic;"><b> Choose from existing bucket</b> </span>
+                            <table class="table table-striped"  >
+                                <thead style="background-color:#bfbfbf">    
+                                    <tr type="button" onclick="https://www.google.com"> 
+                                        
+                                        <td ><b>BUCKET</b></td>
+                                        <td ><b>PATENT COUNT</b></td>
+                                        <td><b>ACTION</b></td>
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody >    
+                                    <tr>
+                                    
+                                        <td>Peter</td>
+                                        <td>4</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lois</td>
+                                        <td>5</td>
+                                        <td>$150</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Joe</td>
+                                        <td>678</td>
+                                        <td>$300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cleveland</td>
+                                        <td>90</td>
+                                        <td>$250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peter</td>
+                                        <td>4</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lois</td>
+                                        <td>5</td>
+                                        <td>$150</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Joe</td>
+                                        <td>678</td>
+                                        <td>$300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cleveland</td>
+                                        <td>90</td>
+                                        <td>$250</td>
+                                    </tr>
+                                    <tr>
+                                                    
+                                        <td>Peter</td>
+                                        <td>4</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lois</td>
+                                        <td>5</td>
+                                        <td>$150</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Joe</td>
+                                        <td>678</td>
+                                        <td>$300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cleveland</td>
+                                        <td>90</td>
+                                        <td>$250</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="well" style="background-color: white;">
+                            <span style="font-style:italic"><b>Your Selected Bucket is:</b></span> <input class="input" type="text" >
+                    </div>
+                    <!-- <div type="button" role="button" style="margin-top:20px; margin-left:40%">
+                     <div id="button" class="col-md-2" style="margin-top:20px; margin-left:20px; padding:14px;width:70px; height:60px; background-color:#b30000">
+                        <span class="glyphicon glyphicon-pencil" style="font-size:30px; color:white;"></span>
+                        
+                    </div>
+                    <div class="col-md-2" style="color:#282828;  font-size:15px; margin-top:20px; margin-bottom:30px;padding-top:20px;width:110px; height:60px; background-color:white">
+                     SUBMIT
+                    </div>
+                    </div> -->
+                    <button class="btn btn-primary bluebutton" style="margin-top:20px; margin-left:40%; margin-bottom:30px;"><span class="glyphicon glyphicon-ok"></span>
+                        Submit 
+                    </button> 
+                </div>    
+                <div id="two" class="tab-pane fade">
+                    <div style="margin-left:30px;margin-top:30px; margin-bottom:20px; background-color : white; border-radius: 30px; width:100%; ">
+                            <span ><b style="font-size:30px; padding-left:20px;">Upload CSV</b> <span style="font-size:15px"> involves uploading CSV file.</span></span> 
+                    </div>
+                    <div style="margin-top:20px; margin-left:40px">
+                          
+                        <div class="panel panel-default" style="margin-top:50px;">
+                            <div class="panel-heading" style="height:40px;">
+
+                            </div>
+                        
+                            <div class="panel-body" >
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+                                    <input type="text"  class="form-control input-md" placeholder="Upload CSV">
+                                    <span class="input-group-btn">
+                                        <button class="browse btn btn-primary input-md" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+                                    </span>
+                                </div>
+                                <br>
+                                <div style="margin-left:160px; margin-bottom:17px;">
+                                    <div class="pull-left" style="border-radius:10px; padding:20px; " >
+                                        <div class="glyphicon-red"> 
+                                                <span class="glyphicon glyphicon-pencil glyphicon-bordered"></span>
+                                        </div>
+                                        <a> Uploading Guidelines</a>
+                                    </div>
+                                    <!-- <div id="button" class="col-md-2" style="margin-top:20px; margin-left:20px; padding:14px;width:70px; height:60px; background-color:#b30000">
+                                        <span class="glyphicon glyphicon-pencil" style="font-size:30px; color:white;"></span>
+                                       
+                                    </div>
+                                    <div class="col-md-2" style="color:#282828; border:1px solid #C8C8C8; font-size:15px; margin-top:20px; padding-top:20px;width:110px; height:60px; background-color:white">
+                                        GUIDELINES
+                                    </div> -->
+                                </div>
+                                
+                                <div class="pull-right" style="margin-right:240px; margin-bottom:17px;">
+                                        <div class="glyphicon-blue"> 
+                                                <span class="glyphicon glyphicon-file glyphicon-bordered"></span>
+                                        </div>
+                                        <a>Sample CSV &nbsp&nbsp&nbsp</a> 
+                                    <!-- <div id="button" class="col-md-2" style=" margin-left:20px; padding:18px;width:70px; height:60px; background-color:#b30000">
+                                        <span class="glyphicon glyphicon-camera" style="font-size:30px; color:white;"></span>
+                                    </div>
+                                    <div class="col-md-2" style="color:#282828; border:1px solid #C8C8C8; font-size:15px;  padding-top:10px;width:110px; height:60px; background-color:white">
+                                        SAMPLE CSV
+                                    </div> -->
+                                </div>
+                                <div style="  margin-left:300px; margin-top:100px;">
+                                    <button class="btn btn-primary bluebutton" style="width:20%; padding:8px 20px;"><i class="glyphicon glyphicon-upload"></i> Upload</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="three" class="tab-pane fade ">
+                    <div style="margin-left:30px;margin-top:30px; margin-bottom:20px; background-color : white; border-radius: 30px; width:100%; ">
+                            <span ><b style="font-size:30px; padding-left:20px;">Map Columns</b> <span style="font-size:15px"> asks you to map the columns from the CSV</span></span> 
+                    </div>
+                    <div class="container" style="width:1000px;">
+                        <div class="panel ">
+                            <br>
+                            <div class="panel-body">
+                                <form>
+                                    <div>
+                                        <div class="checkbox">
+                                                <label><input type="checkbox" value=""><em>Populate Missing fields automatically</em><label>
+                                        </div>
+                                        <br>
+                                        <label><em>Enter start to end column to read taxonomy</em>
+                                        <div class="row">
+                                            <div class="col-sm-2" style="width:100px">
+                                                <input type="number" class="form-control" id="start">
+                                            </div>
+                                            <div class="col-sm-1" style="margin-top:2px;">
+                                                     to
+                                            </div>
+                                            <div class="col-sm-2" style="width:100px">
+                                                <input type="number" class="form-control" id="end">
+                                            </div> 
+                                        </div>
+                                        <label><br>
+
+                                    </div> 
+                                    <br>
+
+                                    <div>       
+                                        <div class="row automatch">
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="docketno">Docket Number</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control docketno dropdown-toggle" >
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#" >Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-md-5">  
+                                                <div class="form-group">
+                                                    <label for="description">Description</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control description dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#" >Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="title">Title(English)</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control title dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-md-5">  
+                                                <div class="form-group">
+                                                    <label for="claims">Claims</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control claims dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">apan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="applicationno">Application number</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control applicationno dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-md-5">  
+                                                <div class="form-group">
+                                                    <label for="applicationdate">Application date</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control applicationdate dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">apan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="ipcurrentfull">Ip Current Full</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control ipcurrentfull dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-md-5">  
+                                                <div class="form-group">
+                                                    <label for="prioritydate">Priority date</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control prioritydate dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">apan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="inventor">Inventor</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control inventor dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-md-5">  
+                                                <div class="form-group">
+                                                    <label for="cpccurrent">CPC Current</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control cpccurrent dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">apan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="sepdata">Sep Data</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control sepdata dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="comments">Comments</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control comments dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="tags">Tags</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control tags dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="custom1">Custom field 1</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control custom1 dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="custom2">Custom field 2</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control custom2 dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="custom3">Custom field 3</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control custom3 dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <div class="form-group">
+                                                    <label for="custom4">Custom Field4</label>    
+                                                    <div class="input-group dropdown">
+                                                        <input type="text" class="form-control custom4 dropdown-toggle" value="NULL">
+                                                        <ul class="dropdown-menu">
+                                                        <li><a href="#" >Norway (+47)</a></li>
+                                                        <li><a href="#" >USA (+1)</a></li>
+                                                        <li><a href="#">Japan (+55)</a></li>
+                                                        </ul>
+                                                        <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <!-- creating custom fields  -->
+                                         <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header modal-header-primary">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                        <h4 class="modal-title" id="myModalLabel">Enter new labelname</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        
+                                                        <input type="text" class="form-control" id="myPopupInput" />
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header  modal-header-primary" style="background-color:#3366cc;">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                        <h4 class="modal-title" id="myModalLabel">Enter  label name</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        
+                                                        <input type="text" class="form-control" id="myPopupInput2" />
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        
+                                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" id="add_field_button" style="margin:10px;" data-toggle="modal" data-target="#myModal2" class="btn btn-primary btn2 bluebutton">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            Add custom fields
+                                        </button>  -->
+                                    </div>
+                    
+                                    <button type="button" class="btn btn-primary  btn-md bluebutton" onclick ="display_automatchedcolumns()" style="width:40%; margin-left:210px; margin-top:30px; height:50px;" ><span class="glyphicon glyphicon-search"> </span> View Auto Matched Columns</button>
+                                    <br><br>
+                                        
+                                    <div class="row" id="row2" style="display:none;">
+                                        <div class="col-md-5 ">
+                                            <div class="form-group">
+                                                <label for="assignee">Assignee/Applicant</label>    
+                                                <div class="input-group dropdown">
+                                                    <input type="text" class="form-control assignee dropdown-toggle" value="NULL">
+                                                    <ul class="dropdown-menu">
+                                                    <li><a href="#" >Norway (+47)</a></li>
+                                                    <li><a href="#" >USA (+1)</a></li>
+                                                    <li><a href="#" >Japan (+55)</a></li>
+                                                    </ul>
+                                                    <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                </div>
+                                            </div>   
+                                        </div>
+                                        <div class="col-md-5">  
+                                            <div class="form-group">
+                                                <label for="abstract">Abstract(English)</label>    
+                                                <div class="input-group dropdown">
+                                                    <input type="text" class="form-control abstract dropdown-toggle" value="NULL">
+                                                    <ul class="dropdown-menu">
+                                                    <li><a href="#" >Norway (+47)</a></li>
+                                                    <li><a href="#" >USA (+1)</a></li>
+                                                    <li><a href="#" >Japan (+55)</a></li>
+                                                    </ul>
+                                                    <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 ">
+                                            <div class="form-group">
+                                                <label for="title">Title(English)</label>    
+                                                <div class="input-group dropdown">
+                                                    <input type="text" class="form-control title dropdown-toggle" value="NULL">
+                                                    <ul class="dropdown-menu">
+                                                    <li><a href="#" >Norway (+47)</a></li>
+                                                    <li><a href="#" >USA (+1)</a></li>
+                                                    <li><a href="#">Japan (+55)</a></li>
+                                                    </ul>
+                                                    <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                </div>
+                                            </div>   
+                                        </div>
+                                        <div class="col-md-5">  
+                                            <div class="form-group">
+                                                <label for="claims">Claims</label>    
+                                                <div class="input-group dropdown">
+                                                    <input type="text" class="form-control claims dropdown-toggle" value="NULL">
+                                                    <ul class="dropdown-menu">
+                                                    <li><a href="#" >Norway (+47)</a></li>
+                                                    <li><a href="#" >USA (+1)</a></li>
+                                                    <li><a href="#">apan (+55)</a></li>
+                                                    </ul>
+                                                    <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 ">
+                                            <div class="form-group">
+                                                <label for="applicationno">Application number</label>    
+                                                <div class="input-group dropdown">
+                                                    <input type="text" class="form-control applicationno dropdown-toggle" value="NULL">
+                                                    <ul class="dropdown-menu">
+                                                    <li><a href="#" >Norway (+47)</a></li>
+                                                    <li><a href="#" >USA (+1)</a></li>
+                                                    <li><a href="#">Japan (+55)</a></li>
+                                                    </ul>
+                                                    <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                </div>
+                                            </div>   
+                                        </div>
+                                        <div class="col-md-5">  
+                                            <div class="form-group">
+                                                <label for="applicationdate">Application date</label>    
+                                                <div class="input-group dropdown">
+                                                    <input type="text" class="form-control applicationdate dropdown-toggle" value="NULL">
+                                                    <ul class="dropdown-menu">
+                                                    <li><a href="#" >Norway (+47)</a></li>
+                                                    <li><a href="#" >USA (+1)</a></li>
+                                                    <li><a href="#">apan (+55)</a></li>
+                                                    </ul>
+                                                    <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 ">
+                                            <div class="form-group">
+                                                <label for="ipcurrentfull">Ip Current Full</label>    
+                                                <div class="input-group dropdown">
+                                                    <input type="text" class="form-control ipcurrentfull dropdown-toggle" value="NULL">
+                                                    <ul class="dropdown-menu">
+                                                    <li><a href="#" >Norway (+47)</a></li>
+                                                    <li><a href="#" >USA (+1)</a></li>
+                                                    <li><a href="#">Japan (+55)</a></li>
+                                                    </ul>
+                                                    <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                </div>
+                                            </div>   
+                                        </div>
+                                        <div class="col-md-5">  
+                                            <div class="form-group">
+                                                <label for="prioritydate">Priority date</label>    
+                                                <div class="input-group dropdown">
+                                                    <input type="text" class="form-control prioritydate dropdown-toggle" value="NULL">
+                                                    <ul class="dropdown-menu">
+                                                    <li><a href="#" >Norway (+47)</a></li>
+                                                    <li><a href="#" >USA (+1)</a></li>
+                                                    <li><a href="#">apan (+55)</a></li>
+                                                    </ul>
+                                                    <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 ">
+                                            <div class="form-group">
+                                                <label for="priorityno">Priority number</label>    
+                                                <div class="input-group dropdown">
+                                                    <input type="text" class="form-control priorityno dropdown-toggle" value="NULL">
+                                                    <ul class="dropdown-menu">
+                                                    <li><a href="#" >Norway (+47)</a></li>
+                                                    <li><a href="#" >USA (+1)</a></li>
+                                                    <li><a href="#">Japan (+55)</a></li>
+                                                    </ul>
+                                                    <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                </div>
+                                            </div>   
+                                        </div>
+                                        <div class="col-md-5">  
+                                            <div class="form-group">
+                                                <label for="prioritycountry">Priority Country</label>    
+                                                <div class="input-group dropdown">
+                                                    <input type="text" class="form-control prioritycountry dropdown-toggle" value="NULL">
+                                                    <ul class="dropdown-menu">
+                                                    <li><a href="#" >Norway (+47)</a></li>
+                                                    <li><a href="#" >USA (+1)</a></li>
+                                                    <li><a href="#">apan (+55)</a></li>
+                                                    </ul>
+                                                    <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- <div class="row">
+                                        <div style="margin-bottom: 25px; margin-left: 40px; width : 70%" class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+                                            <input id="comment" type="text" class="form-control" name="comment" value="" placeholder="Select Column for Comments">                                        
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div style="margin-bottom: 25px; margin-left: 40px; width : 70%" class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-tag"></i></span>
+                                            <input id="tag" type="text" class="form-control" name="tag" value="" placeholder="Select Column for Tags">                                        
+                                        </div>     
+                                    </div> -->
+                                   
+                                    <div  class="pull-left" >
+                                        <button class="btn"><span class="glyphicon glyphicon-arrow-left"></span>
+                                            Previous
+                                        </button>
+                                    </div>
+                                    <div  class="pull-right" style="margin-right:10px;">
+                                        <button class="btn btn-primary bluebutton"><span class="glyphicon glyphicon-ok"></span>
+                                            Submit 
+                                        </button> 
+                                        <button class="btn btn-primary bluebutton"><span class="glyphicon glyphicon-remove"></span>
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </form>   
+                            </div>  <!-- panel body-->
+                        </div>  <!--panel-->
+                    </div>
+                </div> 
+                <div id="four" class="tab-pane fade">
+                    <div style="margin-left:30px;margin-top:30px; margin-bottom:20px; background-color : white; border-radius: 30px; width:100%; ">
+                            <span ><b style="font-size:30px; padding-left:20px;">Product Search</b> <span style="font-size:15px">xlpat helps in finding product similar in technology</span></span> 
+                    </div>
+                    <div class="container-fluid"> <h1>This module to be edited</h1></div>    
+                </div> 
+    
+            </div>
+    </div>
+</div>
+
+
+</body>
+</html>
