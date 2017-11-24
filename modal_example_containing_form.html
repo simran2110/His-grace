@@ -1,0 +1,250 @@
+<html>
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          
+        
+        <style>
+
+    .chip 
+    {
+        display: inline-block;
+        padding: 0 25px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        border-radius: 25px;
+        background-color: #f1f1f1;
+    }
+        
+    .chip img 
+    {
+        float: left;
+        margin: 0 10px 0 -17px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+    .modal-header-primary 
+    {
+        color:#fff;
+        padding:9px 15px;
+        border-bottom:1px solid #eee;
+        background-color: #428bca;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    tbody 
+    {
+        display:block;
+        height:400px;
+        overflow:auto;
+        
+    }
+    thead, tbody tr 
+    {
+        display:table;
+        width:100%;
+        table-layout:fixed;/* even columns width , fix width of table too*/
+    }
+    thead 
+    {
+    
+        width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+    }
+    table 
+    {
+        width:300px;
+        text-align:center;
+        border-left : 15px solid #202020;
+    }
+   
+/* //to set the body scroller
+    .modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 400px;
+    overflow-y: auto;
+}    */
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  color: #555;
+  
+  font-family: 'Arvo';
+  font-size: 18px;
+
+  position: relative;
+  top: 50%;
+  width: 200px;
+}
+.input:focus {
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #AAA;
+}
+
+
+.input:focus + .underline {
+  transform: scale(1);
+}
+
+
+        </style>
+      
+    </head>
+    <body >
+
+            <div class="container">
+                <!-- Modal -->
+                <a class="btn btn-primary" href="#primary" data-toggle="modal"><h4><i class=""></i> Primary</h4></a>
+                <!-- Modal -->
+                <div class="modal fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header modal-header-primary">
+                            <button type="button" class="upload" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h1><i id="upload" class="glyphicon glyphicon-upload"></i> Upload</h1>
+                        </div>
+                        <div class="modal-body" >
+                            <div style="margin-bottom: 25px" class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-camera"></i></span>
+                                <input id="newbucket" type="text" class="form-control" name="newbucket" value="" placeholder="create new bucket">
+                                <span class="input-group-btn">
+                                    <button class="browse btn btn-primary input-md" type="button"><i class="glyphicon glyphicon-enter"></i> Go</button>
+                                </span>                                        
+                            </div>
+                                    
+                            <div class="well" >
+                                <span style="font-style:italic"><b></i>Your Selected Bucket :</b></span> <input class="input" type="text" >
+                            </div>
+                              <br>
+                           
+                            <div class="scrollingTable">    
+                                <table class="table table-striped"  >
+                                    <thead style="background-color:#C6BAB7;">    
+                                        <tr> 
+                                        
+                                            <td  style=" color:black; font-weight:bold;font-family: 'Arvo';
+                                            font-size: 15px;">BUCKET</td>
+                                            <td  style=" color:black; font-weight:bold; font-family: 'Arvo';
+                                            font-size: 15px;" >PATENT COUNT</td>
+                                            <td  style=" color:black; font-weight:bold;  font-family: 'Arvo';
+                                            font-size: 15px;">ACTION</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="font-family: 'Arvo';">    
+                                        <tr>
+                                        
+                                            <td>Peter</td>
+                                            <td>4</td>
+                                            <td>$100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lois</td>
+                                            <td>5</td>
+                                            <td>$150</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Joe</td>
+                                            <td>678</td>
+                                            <td>$300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cleveland</td>
+                                            <td>90</td>
+                                            <td>$250</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Peter</td>
+                                            <td>4</td>
+                                            <td>$100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lois</td>
+                                            <td>5</td>
+                                            <td>$150</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Joe</td>
+                                            <td>678</td>
+                                            <td>$300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cleveland</td>
+                                            <td>90</td>
+                                            <td>$250</td>
+                                        </tr>
+                                        <tr>
+                                                        
+                                            <td>Peter</td>
+                                            <td>4</td>
+                                            <td>$100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lois</td>
+                                            <td>5</td>
+                                            <td>$150</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Joe</td>
+                                            <td>678</td>
+                                            <td>$300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cleveland</td>
+                                            <td>90</td>
+                                            <td>$250</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            
+                            <div class="input-group" style=" padding:5px; width:550px;">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+                                <input type="text"  class="form-control input-md" placeholder="Upload CSV">
+                                <span class="input-group-btn">
+                                    <button class="browse btn btn-primary input-md" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+                                </span>
+                            </div>
+                            <br>
+                            <div class="container" style="padding-left:100px;">
+
+                                <a href="http://www.website.com" title="Website name"><i class="glyphicon glyphicon-pencil"></i> Uploading guidelines</a>
+                                ||
+                                <a href="http://www.website.com" title="Website name"><i class="glyphicon glyphicon-download-alt"></i> Download Sample CSV</a>
+                                        
+                                        
+                            </div>
+                            <br><br>
+                            <div class="container" style="padding-left:240px">
+                                <button class="btn btn-primary" style=" width:10%"><i class="glyphicon glyphicon-upload"></i> Upload</button>
+                                <button type="button" id="close" class="btn" style="color:#428BCA	; background-color : white;border : 1px solid #428BCA; " data-dismiss="modal"><i class="glyphicon glyphicon-remove"></i>Close</button>
+                            </div>
+
+                        <br>
+
+                    </div>
+                                                
+                                </div>
+                               
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                    <!-- Modal -->
+              
+        
+    </body>
+</html>
